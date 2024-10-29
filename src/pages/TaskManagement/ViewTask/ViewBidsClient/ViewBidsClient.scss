@@ -1,0 +1,121 @@
+.bid-box {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  padding: 27px 16px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  border-radius: 4px;
+  background: linear-gradient(0deg, #f8f8f8 0%, #f8f8f8 100%),
+    linear-gradient(0deg, #f8f8f8 0%, #f8f8f8 100%),
+    linear-gradient(0deg, #f8f8f8 0%, #f8f8f8 100%), #f8f8f8;
+
+  margin-bottom: 12px;
+}
+
+.bid-msg {
+  color: var(--Black-900, #212121);
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.bidder-name {
+  color: var(--Black-900, #212121);
+  font-family: "Poppins";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.bidder-desig {
+  color: #575757;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.bidder-location {
+  color: #575757;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.bid-section1 {
+  border-bottom: 1px solid black;
+  padding-bottom: 25px;
+}
+
+.bid-desc {
+  color: var(--Color-Neutral-black, #000);
+  font-family: "Poppins";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 35px; /* 109.375% */
+  padding-top: 20px;
+}
+
+.bid-desc-content {
+  color: var(--Color-Neutral-black, #000);
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px; /* 175% */
+}
+
+.bid-section2 {
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+}
+
+.bid-bg {
+  border-radius: 4px;
+  background: #f8f8f8;
+}
+
+.revision-value {
+  color: var(--Color-Neutral-black, #000);
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px; /* 175% */
+}
+
+.bid-btn {
+  border-radius: 75px;
+  border: 1.5px solid #164863;
+
+  display: flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+
+  color: #164863;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.no-bids {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  padding-top: 20px;
+}

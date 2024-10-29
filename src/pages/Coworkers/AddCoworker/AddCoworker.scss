@@ -1,0 +1,24 @@
+.role-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.role-item.active-item {
+    background-color: #dbf2ff !important;
+    border-color: #007bff;
+}
+
+.role-item label {
+    cursor: pointer;
+}
+
+.role-item:hover {
+    background-color: #dbf2ff; // 
+}
+
+.here{
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}

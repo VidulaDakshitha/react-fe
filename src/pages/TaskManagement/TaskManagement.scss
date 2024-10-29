@@ -1,0 +1,181 @@
+.task-mgmt-header {
+  font-family: "Poppins";
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+}
+
+.create-btn {
+  padding: 10px 20px;
+  gap: 15px;
+  border-radius: 75px;
+
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #ffffff;
+  background-color: #164863;
+  border: none;
+}
+
+.border-btm {
+  border-bottom: #676767 1px solid;
+}
+
+.tasks {
+  border-radius: 20px;
+  background: #f8f8f8;
+}
+
+.task-title-view {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 36px;
+  color: var(--blue-01, #164863);
+  border-radius: 20px;
+}
+
+.task-budget {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 36px;
+  color: #16252d;
+  border-radius: 20px;
+}
+
+.task-description {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: #000000;
+
+  height: 150px;
+  white-space: normal;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  display: block; /* Or display: inline-block; depending on your layout */
+  max-width: 100%; /* Or set a specific width */
+  
+  /* Hide scrollbars */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.task-description::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+.deadline {
+  font-family: "Poppins";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #676767;
+}
+
+.update-btn {
+  padding: 10px 20px;
+  gap: 15px;
+  border-radius: 75px;
+  width: 100px;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #ffffff;
+  background-color: #164863;
+  border: none;
+}
+
+.view-btn {
+  padding: 10px 20px;
+  gap: 15px;
+  border-radius: 75px;
+  width: 100px;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 500;
+  border: #164863 1px solid;
+  color: #164863;
+  background-color: #ffffff;
+}
+
+.view-btn2 {
+  padding: 10px 20px;
+  gap: 15px;
+  opacity: 0.5;
+  border-radius: 75px;
+  width: 100px;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 500;
+  border: #164863 1px solid;
+  color: #164863;
+  background-color: #ffffff;
+}
+
+.notify-box {
+  border-radius: 4px;
+  background: #f8f8f8;
+  padding: 20px;
+}
+.notify-name {
+  color: var(--Black-900, #212121);
+  font-family: "Poppins";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.notify-desc {
+  color: var(--Black-900, #212121);
+  font-family: "Poppins";
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.filter-btn {
+  border-radius: 24px;
+  cursor: pointer;
+  background: #f8f8f8;
+  padding: 8px 30px 8px 30px;
+
+  color: var(--Dark-01, #212427);
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-right: 10px;
+}
+
+.act {
+  border: 1px solid var(--border-gray, #838383);
+}
+
+.task-details {
+  color: #676767;
+  font-family: "Poppins";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+}
+
+.task-details div {
+  padding-left: 8px;
+  border-left: 1px solid grey;
+}
+.progress-lbl {
+  color: #5ca743;
+}

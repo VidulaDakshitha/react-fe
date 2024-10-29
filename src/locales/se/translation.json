@@ -1,0 +1,49 @@
+{
+    "loginPage": {
+      "mainHeading": "Förbinder talang med möjligheter! Låser upp din potential",
+      "logInHeader": "Logga in på Sparetan",
+      "usernameOrEmailPlaceholder": "Användarnamn eller e-post",
+      "passwordPlaceholder": "Lösenord",
+      "continueWithEmailButton": "Fortsätt med e-post",
+      "orText": "Eller",
+      "googleLoginButton": "Logga in med Google",
+      "appleLoginButton": "Logga in med Apple",
+      "bankIdLoginButton": "Logga in med BankID",
+      "dontHaveAccount": "Har du inte ett Sparetan-konto?",
+      "signUpButton": "Registrera dig",
+      "loginBackgroundAlt": "inloggnings-bakgrund"
+    },
+    "registerPage": {
+      "mainHeading": "Förbättra ditt arbetsliv, det är enkelt",
+      "subHeading1": "Publicera ett jobb och lägg bud på uppgiften",
+      "subHeading2": "Ingen kostnad för att gå med",
+      "signupHeader": "Gå med som klient eller frilansare",
+      "firstNameLabel": "Förnamn",
+      "lastNameLabel": "Efternamn",
+      "workEmailLabel": "Arbets e-postadress",
+      "userName":"User Name",
+      "PhoneNumber": "Phone Number",
+      "passwordLabel": "Lösenord",
+      "confirmPasswordLabel": "Bekräfta Lösenord",
+      "countryLabel": "Land",
+      "termsAgreementText": "Ja, jag förstår och godkänner Användarvillkoren och Integritetspolicyn.",
+      "orText": "Eller",
+      "createAccountButton": "Skapa Konto",
+      "loginBackgroundAlt": "inloggnings-bakgrund",
+      "countries": {
+        "sweden": "Sverige"
+      }
+    },
+    "registerTypePage": {
+      "altText": "register type bakgrund",
+      "heading1": "Hitta talang på ditt sätt",
+      "heading2": "Dörren är öppen för dig",
+      "description": "Introducerar Sparetan, den ultimata destinationen för sömlös budgivning på frilansuppdrag. Vår plattform underlättar en strömlinjeformad process där arbetsgivare enkelt kan lägga upp små uppgifter, och erfarna proffs kan lämna konkurrenskraftiga bud för att ta sig an dessa uppgifter.",
+      "optionClient": "Jag är en klient, anställer för ett projekt",
+      "optionFreelancer": "Jag är en frilansare, letar efter arbete",
+      "joinAsClientButton": "Gå med som klient",
+      "joinAsFreelanceButton": "Gå med som frilansare",
+      "loginPrompt": "Har du redan ett konto? Logga in"
+    }
+  }
+  

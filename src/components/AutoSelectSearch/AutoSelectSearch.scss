@@ -1,0 +1,41 @@
+.auto-select-search {
+    padding: 10px;
+    display: flex;
+    align-items: "center";
+    cursor: "pointer";
+}
+
+.bg-selected {
+    background-color:  #F6F6F6;
+}
+
+.bg-focused {
+    background-color: #f0f0f0d6;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.option-img-style {
+    width: 40px;
+    height: 40px;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px; // Adjust as needed to perfectly align
+    top: 50%;
+    transform: translateY(-50%); // Vertically center the icon
+    color: #666666; // Color of the search icon (adjust as needed)
+    z-index: 1;
+    pointer-events: none; // Allow clicking input, not the icon
+}
+.search-bar-wrapper {
+    position: relative;
+    width: 100%;
+  }

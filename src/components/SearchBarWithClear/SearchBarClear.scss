@@ -1,0 +1,15 @@
+.search-input-box {
+  outline: none;
+  border: 1px solid #838383;
+  border-left: none !important;
+  border-radius: 20px;
+}
+
+.search-with-clear .input-group-text {
+  border-right: none !important;
+  border-top-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
+  height: 45px;
+  border: 1px solid var(--border-gray, #E4E4E4) !important;
+  background: #F8F8F8 !important;
+}

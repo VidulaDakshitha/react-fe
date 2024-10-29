@@ -1,0 +1,49 @@
+{
+  "loginPage": {
+    "mainHeading": "Connecting Talent with Opportunity! Unlocking Your Potential",
+    "logInHeader": "Log in to Sparetan",
+    "usernameOrEmailPlaceholder": "Username or Email",
+    "passwordPlaceholder": "Password",
+    "continueWithEmailButton": "Continue With Email",
+    "orText": "Or",
+    "googleLoginButton": "Login with Google",
+    "appleLoginButton": "Login with Apple",
+    "bankIdLoginButton": "Login with BankID",
+    "dontHaveAccount": "Dont have a Sparetan account?",
+    "signUpButton": "Sign Up",
+    "loginBackgroundAlt": "login-background"
+  },
+  "registerPage": {
+    "mainHeading": "Top up your Work game, It’s easy",
+    "subHeading1": "Post a job and bid for the task",
+    "subHeading2": "No Cost to join",
+    "signupHeader": "Join as a client or freelancer",
+    "firstNameLabel": "First Name",
+    "lastNameLabel": "Last Name",
+    "workEmailLabel": "E-mail",
+    "userName": "User Name",
+    "PhoneNumber": "Phone Number",
+    "passwordLabel": "Password",
+    "confirmPasswordLabel": "Confirm Password",
+    "countryLabel": "Country",
+    "termsAgreementText": "Yes, I understand and agree to the Terms of Service and Privacy Policy.",
+    "orText": "Or",
+    "createAccountButton": "Create Account",
+    "savePasswordButton": "Save Password",
+    "loginBackgroundAlt": "login-background",
+    "countries": {
+      "sweden": "Sweden"
+    }
+  },
+  "registerTypePage": {
+    "altText": "register type background",
+    "heading1": "Find talent your way",
+    "heading2": "Door is open to you",
+    "description": "Introducing Sparetan, the ultimate destination for seamless freelance task bidding. Our platform facilitates a streamlined process where employers can effortlessly post small tasks, and seasoned professionals can submit competitive bids to undertake these tasks.",
+    "optionClient": "I’m hiring for a project",
+    "optionFreelancer": "I’m looking for a work",
+    "joinAsClientButton": "Join as a client",
+    "joinAsFreelanceButton": "Join as a Worker",
+    "loginPrompt": "Already have an account? Log in"
+  }
+}

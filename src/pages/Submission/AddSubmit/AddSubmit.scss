@@ -1,0 +1,19 @@
+.invoice-header{
+    color: var(--Dark-01, var(--font---gray, #212427));
+font-family: 'Poppins';
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.accordion-button{
+    background: transparent !important;
+}
+
+
+.accordion-button:focus{
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}

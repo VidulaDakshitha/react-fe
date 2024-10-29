@@ -1,0 +1,61 @@
+.employee-btn {
+    padding: 8px 20px;
+    width: 120px;
+    gap: 15px;
+    border-radius: 75px;
+    cursor: pointer;
+    font-family: "Poppins";
+    font-size: 13px;
+    font-weight: 500;
+  
+    color: #ffffff;
+    background-color: #164863;
+    border: none;
+  }
+
+  .table{
+    border: 1px solid #E4E4E4;
+    font-family: 'poppins';
+    font-size: 14px;
+  }
+
+  th{
+    background-color: #F1F3F9 !important;
+    color: #534D59 !important;
+    font-weight: 600 !important;
+  }
+
+  .table-stripes>tbody>tr:nth-of-type(even)>* {
+    
+    --bs-table-bg-type: #F1F3F9;
+}
+
+.active-badge{
+    border-radius: 20px;
+    background-color: #E9FFEF;
+    color: green;
+    padding: 8px;
+    width: 100px;
+}
+
+.active-dot{
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: green;
+}
+
+.inactive-badge{
+    border-radius: 20px;
+    background-color: #E4E4E4;
+    color: grey;
+    padding: 8px;
+    width: 100px;
+}
+
+.inactive-dot{
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: #3F3748;
+}

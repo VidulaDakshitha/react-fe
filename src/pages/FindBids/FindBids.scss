@@ -1,0 +1,75 @@
+.banner-bg {
+  background-color: #427d9d;
+
+  border-radius: 10px;
+}
+
+.banner-header {
+  font-family: Georgia;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 45.45px;
+  color: #ffffff;
+}
+
+.banner-description {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.search-size2 {
+  height: 45px;
+  width: 90%;
+}
+
+.prof-box {
+  width: 100%;
+  height: 240px;
+  border-radius: 10px;
+  background: #f4f4f4;
+}
+
+.prof-name {
+  color: var(--Color-Neutral-black, #000);
+  font-family: "Poppins";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.filter-box {
+  width: 100%;
+  height: 240px;
+  border-radius: 10px;
+  background: #f4f4f4;
+}
+
+.filter-type {
+  color: var(--Color-Neutral-black, #000);
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.chk-box {
+  border-radius: 5px !important;
+  background: #d9d9d9 !important;
+  width: 15px;
+  height: 15px;
+}
+
+.chk-label {
+  color: var(--Color-Neutral-black, #000);
+  font-family: "Poppins";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

@@ -1,0 +1,171 @@
+.add-skills-container {
+  position: relative;
+}
+
+.search-bar-container {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.search-bar-inner {
+  width: 80%;
+  height: 100%;
+  position: relative;
+}
+
+.input-box {
+  width: 100%;
+  padding: 10px;
+  position: absolute;
+  top: 32px;
+  left: 0;
+  background: #f6f6f6;
+  border-radius: 5px;
+  border: 1px solid #a9a6a6;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.search-input {
+  border: none;
+  background: none;
+  outline: none;
+  color: #838383;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  width: 100%;
+}
+
+.dropdown-menu-bs {
+  position: absolute !important;
+  top: calc(100% + 8px) !important;
+  left: 0 !important;
+  width: 100% !important;
+  max-height: 200px !important;
+  overflow-y: auto !important;
+  z-index: 1000 !important;
+  background-color: white;
+}
+
+.dropdown-item {
+  cursor: pointer !important;
+  transition: background 0.3s !important;
+}
+
+.dropdown-item:hover {
+  background: #f0f0f0 !important;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.save-button {
+  height: 51px;
+  padding: 10px 30px;
+  background: #164863;
+  border: none;
+  border-radius: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s;
+
+  &:hover {
+    background: #123a50;
+  }
+}
+
+.button-text {
+  color: white;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+// Skill container
+
+.sc-skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 80%;
+  margin: 0 auto 20px;
+}
+
+.sc-button-container {
+  width: 141px;
+  height: 48px;
+  position: relative;
+}
+
+.sc-button-background {
+  width: 130px;
+  height: 38px;
+  position: absolute;
+  background: white;
+  border-radius: 30px;
+  border: 1px solid #9e9e9e;
+}
+
+.sc-button-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.sc-button-text {
+  color: #838383;
+  font-size: 14px;
+  width: 70%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 24px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sc-button-icon {
+  width: 14px;
+  height: 15px;
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  img {
+    width: 14px;
+    height: 15px;
+  }
+}

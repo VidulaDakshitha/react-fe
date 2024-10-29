@@ -1,0 +1,35 @@
+.file-drop-zone{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+
+
+    border-radius: 10px;
+border: 1px solid var(--border-gray-02, #A9A6A6);
+padding: 10px;
+
+}
+
+.invoice-txt{
+    color: var(--Dark-01, var(--font---gray, #212427));
+font-family: 'Poppins';
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-align: center;
+}
+
+.browse-button{
+    display: flex;
+
+padding: 6px 34.5px;
+justify-content: center;
+align-items: center;
+gap: 15px;
+flex-shrink: 0;
+border-radius: 75px;
+color: white;
+background: #164863;
+}
+

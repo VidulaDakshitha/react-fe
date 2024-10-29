@@ -1,0 +1,33 @@
+.bid-details-box {
+  border-radius: 20px;
+  background: #f8f8f8;
+  padding: 20px;
+  width: 100%;
+}
+
+.bid-time {
+  color: #676767;
+  font-family: "Poppins";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.bid-title {
+  color: #164863;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.bid-description{
+    color: var(--Dark-01, #212427);
+font-family: 'Poppins';
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}

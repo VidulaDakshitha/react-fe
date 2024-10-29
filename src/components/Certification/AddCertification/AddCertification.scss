@@ -1,0 +1,166 @@
+.sc-container {
+  width: 100%;
+  //max-width: 783px;
+  height: auto;
+  position: relative;
+  background: white;
+  border-radius: 10px;
+  border: 1px #a9a6a6 solid;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sc-innerContainer {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.sc-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 20px;
+
+  &:nth-of-type(2) {
+    margin-top: 20px;
+  }
+}
+
+.sc-column {
+  width: 100%;
+  max-width: 308px;
+  height: auto;
+  position: relative;
+}
+
+.sc-label {
+  width: 100%;
+  position: relative;
+  color: #838383;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+
+.sc-input {
+  width: 100%;
+  padding: 12px;
+  background: #f6f6f6;
+  border-radius: 5px;
+  border: 1px #a9a6a6 solid;
+
+  &.sc-input-light {
+    background: #f8f8f8;
+  }
+}
+
+.sc-button-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.sc-button-text {
+  color: #838383;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 24px;
+  margin-right: 8px;
+  margin-left: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sc-button-icon {
+  width: 14px;
+  height: 15px;
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  img {
+    width: 14px;
+    height: 15px;
+  }
+}
+
+.sc-close-button {
+  width: 34px;
+  height: 34px;
+  // background: url("./close.png") no-repeat center center;
+  // background-size: contain;
+  border: none;
+  border-radius: 9999px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.sc-add-button {
+  width: 34px;
+  height: 34px;
+  // background: url('./add.png') no-repeat center center;
+  // background-size: contain;
+  border: none;
+  // border-radius: 9999px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  width: calc(100% - 16px); // Align with the right edge of the loop items
+  margin-top: 16px; // Add gap between save button and loop items
+  padding-right: 16px;
+}
+
+.save-button {
+  height: 51px;
+  padding: 10px 30px;
+  background: #164863;
+  border: none;
+  border-radius: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s;
+
+  &:hover {
+    background: #123a50;
+  }
+}
+
+.button-text {
+  color: white;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 20px;
+}

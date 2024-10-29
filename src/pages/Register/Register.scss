@@ -1,0 +1,110 @@
+.register-main-heading {
+  font-family: Georgia;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 50px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.register-sub-heading {
+  font-family: "poppins";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 40px;
+  text-align: left;
+  padding-left: 20px;
+
+  display: flex;
+  align-items: center;
+}
+
+.register-sub-heading > div {
+  width: 23px;
+  height: 23px;
+  background-color: #164863;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.signup-header {
+  font-family: "Poppins";
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  color: #164863;
+}
+.register-input {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #838383;
+  padding: 10px 10px 10px 20px;
+}
+
+.register-input:focus {
+  outline: none;
+}
+
+.register-lbl {
+  color: rgba(0, 0, 0, 0.54);
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.register_bg {
+  width: 70%;
+  height: auto;
+}
+
+.labels-style {
+  font-family: "Poppins";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+.terms {
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: left;
+}
+
+.register-social-btns {
+  width: 100%;
+  height: 50px;
+  border-radius: 100px;
+  font-family: "Poppins";
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: left;
+  color: #838383;
+  background: white;
+  border: 1px solid #838383;
+}
+
+.register-btn {
+  width: 50%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  background: #164863;
+
+  color: white;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+  border: none;
+}

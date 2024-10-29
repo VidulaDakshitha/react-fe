@@ -1,0 +1,223 @@
+.info {
+  font-family: "Poppins";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 35px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.678);
+}
+
+.task-title {
+  color: #000;
+  font-family: "Poppins";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  padding-bottom: 30px;
+}
+
+.by-user {
+  color: #164863;
+  font-family: "Poppins";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 35px;
+  padding-left: 20px;
+}
+
+.task-desc {
+  color: #000;
+  font-family: "Poppins";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px; /* 175% */
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+}
+
+.acceptance-header {
+  color: #000;
+  font-family: "Poppins";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 35px; /* 109.375% */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.acceptance-desc {
+  color: #000;
+  font-family: "Poppins";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 175% */
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
+.skills-header {
+  color: #000;
+  font-family: "Poppins";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 35px; /* 109.375% */
+}
+
+.skills-type {
+  color: #000;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px; /* 175% */
+}
+
+.skill {
+  border-radius: 50px;
+  background: #d9d9d9;
+  display: inline-flex;
+  padding: 8px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  color: #212121;
+  font-family: "Poppins";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px; /* 175% */
+  white-space: nowrap;
+}
+
+.skill-bid {
+  border-radius: 50px;
+  background: #d9d9d9;
+  display: inline-flex;
+  padding: 5px 25px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  color: #212121;
+  font-family: "Poppins";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px; /* 175% */
+  white-space: nowrap;
+}
+
+.bottom-border {
+  border-bottom: 1px solid black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.min-bid {
+  padding: 8px 30px;
+
+  flex-shrink: 0;
+  border-radius: 100px;
+  background: #d9d9d9;
+
+  color: #164863;
+  font-family: "Poppins";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 35px; /* 109.375% */
+}
+.attachment-header {
+  color: #000;
+  font-family: "Poppins";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 109.375% */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.attachment-section {
+  border-radius: 10px;
+  background: #f8f8f8;
+  width: 100%;
+  padding: 30px;
+}
+
+.attachment {
+  padding: 10px;
+  flex-shrink: 0;
+  border-radius: 8.77px;
+  background: var(--White, #fff);
+}
+.doc-name {
+  color: #03014c;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.doc-size {
+  color: #03014c;
+  font-family: "Poppins";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.remaining-txt {
+  color: #676767;
+  font-family: "Poppins";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.nav-link {
+  border: none !important;
+  color: var(--Color-Neutral-black, #000) !important;
+  font-family: "Poppins";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.active {
+  color: var(--Color-Neutral-black, #000);
+  font-family: "Poppins";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: normal;
+  background-color: transparent !important;
+}
+
+.nav-tabs {
+  // border: none !important;
+  border-bottom: 1px solid black !important;
+}
+
+.verified-txt {
+  color: var(--Color-Neutral-black, #000);
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px; /* 218.75% */
+}
