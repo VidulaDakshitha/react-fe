@@ -82,7 +82,7 @@ export const ViewTask = () => {
           </div>
         </div>
 
-{  ['sales','gig_worker'].some((role:any) => hasRole(role)) &&   taskDetails && taskDetails.is_accepted==0 && taskDetails.is_completed==0 &&     <div>                <button
+{  ['sales','gig_worker','over_employee','admin'].some((role:any) => hasRole(role)) &&   taskDetails && taskDetails.is_accepted==0 && taskDetails.is_completed==0 &&     <div>                <button
                   className="task-btn"
                   onClick={() => toggleBidViewModal()}
                 >
@@ -90,7 +90,7 @@ export const ViewTask = () => {
                 </button></div>}
       </div>
 
-      { ['admin'].some((role:any) => hasRole(role)) ?  (
+      { ['admin','task_manager','gig_worker','over_employee'].some((role:any) => hasRole(role)) ?  (
         <Tabs
           defaultActiveKey="Details"
           id="uncontrolled-tab-example"

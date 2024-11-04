@@ -162,11 +162,11 @@ const attributeLabels: { [key: string]: string } = {
     };
 
     if(searchValue=='accepted'){
-      params.is_post_approved = 1
+      params.bid_type = 'in_progress'
     }
 
     if(searchValue=='rejected'){
-      params.is_post_rejected = 1
+      params.bid_type = 'rejected'
     }
 
     const tasks: any = await getBidsOriginApi(jsonToUrlParams(params));
@@ -236,7 +236,7 @@ const attributeLabels: { [key: string]: string } = {
             }`}
             onClick={() => setSearchValue("accepted")}
           >
-            Accepted
+            In Progress
           </div>
           <div
             className={`filter-btn ${searchValue == "rejected" ? "act" : ""}`}

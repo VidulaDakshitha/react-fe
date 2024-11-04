@@ -312,26 +312,41 @@ const NotificationBell: React.FC<{ notifications: any[] }> = ({ notifications })
     const taskOptions = [
       { label: "My Task", path: "/my-task" },
       { label: "Accepted Tasks", path: "/accepted-task" },
-  { label: "Find Task", path: "/task-management" },
+  // { label: "Find Task", path: "/task-management" },
     ];
 
-    if(hasPermission(['customer']) && !hasOrganization() && roles.length==1){
-      taskOptions.pop()
-    }
+    // if(hasPermission(['customer']) && !hasOrganization() && roles.length==1){
+    //   taskOptions.pop()
+    // }
 
-    if(hasPermission(['consultant'])){
-      taskOptions.pop()
+    // if(hasPermission(['consultant'] || hasPermission(['task_manager'])){
+    //   taskOptions.pop()
+    // }
+
+    if(hasPermission(['admin']) || hasPermission(['sales']) || hasPermission(['over_employee'])  || hasPermission(['gig_worker'])){
+      taskOptions.push({ label: "Find Task", path: "/task-management" })
     }
     items.push(renderDropdown("Task", taskOptions, taskDropdownVisible, setTaskDropdownVisible));
 
+    let bidOptions:any = [];
     // Bid dropdown with hover effect
-    if ((hasOrganization() &&  hasPermission(['admin','sales','task_manager'])|| !hasOrganization())) {
-      const bidOptions = [
+    if (hasPermission(['admin']) || hasPermission(['sales']) || hasPermission(['over_employee'])  || hasPermission(['gig_worker'])) {
+       bidOptions = [
         { label: "My Bids", path: "/my-bids" },
-        { label: "Bids", path: "/my-bids-summary" },
+      
       ];
-      items.push(renderDropdown("Bid", bidOptions, bidDropdownVisible, setBidDropdownVisible));
+      
     }
+
+    if(hasPermission(['admin']) || hasPermission(['task_manager']) || hasPermission(['over_employee']) || hasPermission(['gig_worker'])){
+      bidOptions.push(  { label: "Bids", path: "/my-bids-summary" })
+    }
+
+        if(hasPermission(['customer']) && !hasOrganization() && roles.length==1){
+          bidOptions.push(  { label: "Bids", path: "/my-bids-summary" })
+    }
+
+    items.push(renderDropdown("Bid", bidOptions, bidDropdownVisible, setBidDropdownVisible));
 
     if (hasPermission(['admin'])) {
       items.push(renderMenuItem("Co-workers", "/coworkers", isMobile));
