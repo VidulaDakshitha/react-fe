@@ -158,7 +158,7 @@ const attributeLabels: { [key: string]: string } = {
       page: tablePageIndex,
       limit: itemsPerPage,
       keyword: keyword,
-      origin: 1,
+      worker: 1,
     };
 
     if(searchValue=='accepted'){

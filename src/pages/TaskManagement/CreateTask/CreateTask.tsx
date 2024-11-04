@@ -17,6 +17,7 @@ import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import * as Yup from "yup";
 import AddSubContractors from "./AdvancedOption/AddSubContractors";
+import { useUserRole } from "../../../hooks/HasRole";
 interface Skill {
   id: number;
   skill: string;
@@ -44,7 +45,6 @@ const createTaskValidation = Yup.object().shape({
       (value) => value && new Date(value) > new Date()
     ),
     communication_deadline: Yup.date()
-    .required("Required")
     .test(
       "is-future-date",
       "Communication deadline must be in the future",
@@ -82,7 +82,7 @@ export const CreateTask = ({ closeModal, recallData }: createTaskProps) => {
   const [modalShow, setModalShow] = useState(false);
   const toggleModal = () => setModalShow(!modalShow);
   const [isLoading, setIsLoading] = useState(false);
-
+  const { roles, hasRole, hasOrganization } = useUserRole();
   const initialValues = {
     title: "",
     description: "",
@@ -254,92 +254,6 @@ export const CreateTask = ({ closeModal, recallData }: createTaskProps) => {
 
 
             <div className="row">
-              <div className="col-lg-4 col-md-4 col-12 pt-2">
-                <div className="label pb-2">Bid Deadline</div>
-                <div>
-                  <InputField
-                    label=""
-                    className="task-input mb-4 task-deadline"
-                    name="bid_deadline"
-                    isDisabled={false}
-                    fieldType="datetime-local"
-                    placeholder={""}
-                  />
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-md-4 col-12 pt-2">
-                <div className="label pb-2">Task Deadline</div>
-                <div>
-                  <InputField
-                    label=""
-                    className="task-input mb-4 task-deadline"
-                    name="task_deadline"
-                    isDisabled={false}
-                    fieldType="datetime-local"
-                    placeholder={""}
-                  />
-                </div>
-              </div>
-
-              
-              <div className="col-lg-4 col-md-4 col-12 pt-2">
-                <div className="label pb-2">Communication Deadline</div>
-                <div>
-                  <InputField
-                    label=""
-                    className="task-input mb-4 task-deadline"
-                    name="communication_deadline"
-                    isDisabled={false}
-                    fieldType="datetime-local"
-                    placeholder={""}
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col-12">
-                <div className="label pt-2">Task Budget</div>
-
-                <div className="col-12 pt-2">
-                  <div className="input-group d-flex">
-                    <InputField
-                      label=""
-                      className="budget-input mb-4"
-                      name="budget"
-                      isDisabled={false}
-                      fieldType="number"
-                      placeholder={""}
-                    />
-                    <div className="input-group-append">
-                      <SelectField
-                        name="currency"
-                        options={[
-                          {
-                            value: "USD",
-                            label: "USD",
-                          },
-                          {
-                            value: "SEK",
-                            label: "SEK",
-                          },
-                          {
-                            value: "EUR",
-                            label: "EUR",
-                          },
-                        ]}
-                        label={""}
-                        className="currency-select mb-3"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <div className="row">
               <div className="col-lg-6 col-md-6 col-12  pt-2">
                 <div className="label mb-3">Communication Type</div>
                 <div className="row mb-3">
@@ -381,6 +295,53 @@ export const CreateTask = ({ closeModal, recallData }: createTaskProps) => {
               </div>
             </div>
 
+
+     <div className="row">
+              <div className="col-lg-4 col-md-4 col-12 pt-2">
+                <div className="label pb-2">Bid Deadline</div>
+                <div>
+                  <InputField
+                    label=""
+                    className="task-input mb-4 task-deadline"
+                    name="bid_deadline"
+                    isDisabled={false}
+                    fieldType="datetime-local"
+                    placeholder={""}
+                  />
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-md-4 col-12 pt-2">
+                <div className="label pb-2">Task Deadline</div>
+                <div>
+                  <InputField
+                    label=""
+                    className="task-input mb-4 task-deadline"
+                    name="task_deadline"
+                    isDisabled={false}
+                    fieldType="datetime-local"
+                    placeholder={""}
+                  />
+                </div>
+              </div>
+
+              
+      {formik.values.communication_type === "open" &&               <div className="col-lg-4 col-md-4 col-12 pt-2">
+                <div className="label pb-2">Communication Deadline</div>
+                <div>
+                  <InputField
+                    label=""
+                    className="task-input mb-4 task-deadline"
+                    name="communication_deadline"
+                    isDisabled={false}
+                    fieldType="datetime-local"
+                    placeholder={""}
+                  />
+                </div>
+              </div>}
+            </div>
+
+
             <div className="row">
               <div className="col-lg-6 col-md-6 col-12  pt-2">
                 <div className="label mb-3">Bid Type</div>
@@ -414,6 +375,21 @@ export const CreateTask = ({ closeModal, recallData }: createTaskProps) => {
                       <span className="terms">Close Bid</span>
                     </div>
                   </div>
+
+                  <div className="col-lg-4 col-md-4 col-6">
+                    <div
+                      className="pe-5 type-box"
+                      onClick={() => formik.setFieldValue("bid_type", "max_price")}
+                    >
+                      <Field
+                        type="radio"
+                        name="bid_type"
+                        className="me-2"
+                        value="max_price"
+                      />
+                      <span className="terms">Max Price</span>
+                    </div>
+                  </div>
                 </div>
                 <ErrorMessage
                   name="bid_type"
@@ -422,6 +398,51 @@ export const CreateTask = ({ closeModal, recallData }: createTaskProps) => {
                 />
               </div>
             </div>
+
+{formik.values.bid_type === "max_price" && 
+            <div className="row">
+              <div className="col-12">
+                <div className="label pt-2">Task Budget</div>
+
+                <div className="col-12 pt-2">
+                  <div className="input-group d-flex">
+                    <InputField
+                      label=""
+                      className="budget-input mb-4"
+                      name="budget"
+                      isDisabled={false}
+                      fieldType="number"
+                      placeholder={""}
+                    />
+                    <div className="input-group-append">
+                      <SelectField
+                        name="currency"
+                        options={[
+                          {
+                            value: "USD",
+                            label: "USD",
+                          },
+                          {
+                            value: "SEK",
+                            label: "SEK",
+                          },
+                          {
+                            value: "EUR",
+                            label: "EUR",
+                          },
+                        ]}
+                        label={""}
+                        className="currency-select mb-3"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>}
+
+
+
+
 
             <div className="col-12 mt-3">
               <div className="label mb-3">Task Type</div>
@@ -513,10 +534,10 @@ export const CreateTask = ({ closeModal, recallData }: createTaskProps) => {
                 }
               />
             </div>
-            <AddSubContractors
+   {['task_manager','admin'].some((role:any) => hasRole(role)) &&         <AddSubContractors
               selectedSubContractor={selectedSubContractor}
               setSelectedSubContractor={setSelectedSubContractor}
-            />
+            />}
             <div>
               <div className="d-flex justify-content-end mt-3 pb-lg-0 pb-4">
                 <Button

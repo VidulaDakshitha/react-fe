@@ -43,7 +43,7 @@ export const UpdateTask = ({
   const [isLoading, setIsLoading] = useState(false);
   const [selectedSubContractor, setSelectedSubContractor] = useState<any>([]);
   const [task, setTasks] = useState<any>();
-  const { roles, hasRole } = useUserRole();
+  const { roles, hasRole, hasOrganization } = useUserRole();
 
   useEffect(()=>{
     getTaskByID()
@@ -419,10 +419,10 @@ export const UpdateTask = ({
                 }
               />
             </div>
-            <AddSubContractors
+       {['task_manager','admin'].some((role:any) => hasRole(role)) &&          <AddSubContractors
               selectedSubContractor={selectedSubContractor}
               setSelectedSubContractor={setSelectedSubContractor}
-            />
+            />}
             <div className="mt-3">
               <div className="d-flex justify-content-end mt-1 pb-lg-0 pb-4 ">
            { task && task.is_post_approved == false && task.is_post_approved==false && ['admin','task_manager'].some((role:any) => hasRole(role)) && <>    <Button

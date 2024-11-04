@@ -318,6 +318,10 @@ const NotificationBell: React.FC<{ notifications: any[] }> = ({ notifications })
     if(hasPermission(['customer']) && !hasOrganization() && roles.length==1){
       taskOptions.pop()
     }
+
+    if(hasPermission(['consultant'])){
+      taskOptions.pop()
+    }
     items.push(renderDropdown("Task", taskOptions, taskDropdownVisible, setTaskDropdownVisible));
 
     // Bid dropdown with hover effect
@@ -331,7 +335,7 @@ const NotificationBell: React.FC<{ notifications: any[] }> = ({ notifications })
 
     if (hasPermission(['admin'])) {
       items.push(renderMenuItem("Co-workers", "/coworkers", isMobile));
-      items.push(renderMenuItem("Connections", "/connections", isMobile));
+      // items.push(renderMenuItem("Connections", "/connections", isMobile));
     }
 
     items.push(renderMenuItem("Chat", "/chat", isMobile));

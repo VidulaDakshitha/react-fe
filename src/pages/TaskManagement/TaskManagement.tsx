@@ -137,13 +137,13 @@ export const TaskManagement = () => {
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <Button
             buttonText="Create Task"
             onClickHandler={() => toggleModal()}
             className="create-btn"
           ></Button>
-        </div>
+        </div> */}
       </div>
 
       <div className="row pt-4">
@@ -205,7 +205,7 @@ export const TaskManagement = () => {
               </div>
             ))}
 
-{tasks.length==0 && <NoData noData="No Task Data Found" noDataDesc="Get Started by creating a task"/>}
+{tasks.length==0 && <NoData noData="No Task Data Found" noDataDesc=""/>}
         </div>
         {/* <div style={{display:'none'}} className="col-3 hide-mobile">
           {notificationdata &&
