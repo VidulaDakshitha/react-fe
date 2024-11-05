@@ -125,7 +125,7 @@ const attributeLabels: { [key: string]: string } = {
   remaining_amount: 'Remaining Amount',
   is_fully_paid: 'Fully Paid',
   progress: 'Progress',
-  exit_criteria: 'Exit Criteria',
+  // exit_criteria: 'Exit Criteria',
   communication_deadline: 'Communication Deadline',
   communication_type: 'Communication Type',
   is_sub_contractors_only: 'Sub Contractors Only',
@@ -184,10 +184,10 @@ const attributeLabels: { [key: string]: string } = {
   };
 
   const updateDataBtn = (row: { [key: string]: any }) => {
-    console.log("visited");
+    console.log("visited",row);
     return (
       <div className="d-flex w-100">
-    {['sales','admin'].some((role:any) => hasRole(role)) &&    <button
+    {['sales','admin'].some((role:any) => hasRole(role)) &&   row['is_worker_accepted'] && <button
           className="employee-btn me-2 w-auto"
           onClick={() => {toggleUpdateModal();setSelectId(row["id"])}}
         >
@@ -196,19 +196,28 @@ const attributeLabels: { [key: string]: string } = {
 }
 
 
-{['consultant','gig_worker','billing'].some((role:any) => hasRole(role)) &&    <button
+{['consultant','gig_worker','billing'].some((role:any) => hasRole(role))  &&   <button
           className="employee-btn me-2 w-auto"
           onClick={() => {navigate("/submission/"+row["id"])}}
         >
           Add Submission
         </button>
 }
-       {['consultant_manager','admin'].some((role:any) => hasRole(role)) && <button
+       {['consultant_manager','admin'].some((role:any) => hasRole(role)) && row['is_worker_accepted'] && <button
           className="employee-btn me-2  w-auto"
           onClick={() => {toggleViewModal();setSelectId(row["id"])}}
         >
           Assign Consultant
         </button>}
+
+
+        {['sales','admin'].some((role:any) => hasRole(role)) && !row['is_worker_accepted'] &&    <button
+          className="employee-btn me-2 w-auto"
+          onClick={() => {toggleUpdateModal();setSelectId(row["id"])}}
+        >
+          Accept Task
+        </button>
+}
 
         <button
           className="employee-btn"
@@ -322,6 +331,16 @@ const attributeLabels: { [key: string]: string } = {
       >
                    <AssignConsultant task_id={selectTaskId?selectTaskId:0} recallData={getAllTasks} closeModal={toggleViewModal}/>
 
+      </CustomModal>
+
+
+
+      <CustomModal
+        show={modalShow}
+        toggle={toggleModal}
+        ModalHeader="Accept Task"
+      >
+          <p></p>
       </CustomModal>
     </div>
   );

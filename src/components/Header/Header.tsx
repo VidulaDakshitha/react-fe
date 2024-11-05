@@ -346,7 +346,10 @@ const NotificationBell: React.FC<{ notifications: any[] }> = ({ notifications })
           bidOptions.push(  { label: "Bids", path: "/my-bids-summary" })
     }
 
-    items.push(renderDropdown("Bid", bidOptions, bidDropdownVisible, setBidDropdownVisible));
+    if(bidOptions.length>0){
+      items.push(renderDropdown("Bid", bidOptions, bidDropdownVisible, setBidDropdownVisible));
+
+    }
 
     if (hasPermission(['admin'])) {
       items.push(renderMenuItem("Co-workers", "/coworkers", isMobile));
