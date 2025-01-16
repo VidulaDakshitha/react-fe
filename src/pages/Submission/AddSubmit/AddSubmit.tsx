@@ -50,7 +50,10 @@ export const AddSubmit = ({ id }: any) => {
     }
 
     
-  
+    if(['billing'].some((role:any) => hasRole(role)) ){
+     data.description  = "uploaded invoice"
+
+    }
     const bid_request: any = await createSubmissionApi(data);
     setIsLoading(false);
     if (bid_request.status == 201) {

@@ -192,7 +192,7 @@ export const AcceptedTasks = () => {
     console.log("visited", row);
     return (
       <div className="d-flex w-100">
-        {["sales", "admin"].some((role: any) => hasRole(role)) &&
+        {/* {["sales", "admin"].some((role: any) => hasRole(role)) &&
           row["is_worker_accepted"] && (
             <button
               className="employee-btn me-2 w-auto"
@@ -203,7 +203,7 @@ export const AcceptedTasks = () => {
             >
               Assign Manager
             </button>
-          )}
+          )} */}
 
         {["consultant", "gig_worker", "billing"].some((role: any) =>
           hasRole(role)
@@ -218,7 +218,7 @@ export const AcceptedTasks = () => {
           </button>
         )}
         {["consultant_manager", "admin"].some((role: any) => hasRole(role)) &&
-          row["is_worker_accepted"] && (
+          !row["has_assignee"] && (
             <button
               className="employee-btn me-2  w-auto"
               onClick={() => {
@@ -231,7 +231,7 @@ export const AcceptedTasks = () => {
           )}
 
         {["sales", "admin"].some((role: any) => hasRole(role)) &&
-          !row["is_worker_accepted"] && (
+          !row["has_manager"] && row["is_worker_accepted"] && (
             <button
               className="employee-btn me-2 w-auto"
               onClick={() => {
@@ -405,6 +405,8 @@ export const AcceptedTasks = () => {
             tasks.find((task: any) => task.id === selectTaskId)
               ?.exit_criteria || ""
           }
+          recallData={getAllTasks}
+          closeModal={toggleAcceptTermsModal}
           id={selectTaskId?.toString() || ""}
         />
       </CustomModal>
