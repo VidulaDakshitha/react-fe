@@ -8,6 +8,9 @@
   cursor: pointer;
 }
 
+.dropdown-item{
+  font-family: "poppins";
+}
 .menu-option {
   font-family: "Poppins";
   font-size: 14px;
@@ -32,11 +35,20 @@
   .hide-mobile{
     display: none !important;
   }
+
+  .hide-menu{
+    display: none !important;
+  }
 }
 
 @media (min-width:768px) {
   .hide-desktop{
     display: none !important;
+  }
+
+  
+  .hide-menu{
+    display: flex !important;
   }
 }
 

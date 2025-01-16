@@ -214,7 +214,7 @@ function App() {
           <Route
             path="chat"
             element={
-              <ProtectedRoute>
+              <ProtectedRoute requiredRoles={["admin", "sales", "task_manager", "customer"]}>
                 <Chat />
               </ProtectedRoute>
             }

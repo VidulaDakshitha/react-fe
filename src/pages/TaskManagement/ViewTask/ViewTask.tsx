@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { TaskViewProps } from "../../../types/types";
 import { convertUtcDateToLocalTime } from "../../../utils/date_time";
 import "./ViewTask.scss";
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import { getTaskByIdApi } from "../../../services/task.service";
 import { toast } from "react-toastify";
 import { getTaskApiAttributes } from "../../../types/api_types";
@@ -15,40 +15,11 @@ import payment from "../../../assets/payment.png";
 import CustomModal from "../../../components/Modal/Modal";
 import { CreateBid } from "../../BidManagement/CreateBid/CreateBid";
 import { useUserRole } from "../../../hooks/HasRole";
-// export const ViewTask = ({ taskData }: TaskViewProps) => {
-//   return (
-//     <div>
-//       <div className="row">
-//         <div className="col-4 label">Title</div>
-//         <div className="col-8 info">{taskData?.title}</div>
-//       </div>
 
-//       <div className="row">
-//         <div className="col-4 label">Task Budget</div>
-//         <div className="col-8 info">{taskData?.currency} {taskData?.budget}</div>
-//       </div>
-
-//       <div className="row">
-//         <div className="col-4 label">Bid Deadline</div>
-//         <div className="col-8 info">{convertUtcDateToLocalTime(taskData?.bid_deadline)}</div>
-//       </div>
-
-//       <div className="row">
-//         <div className="col-4 label">Task Deadline</div>
-//         <div className="col-8 info">{convertUtcDateToLocalTime(taskData?.task_deadline)}</div>
-//       </div>
-
-//         <div>
-//             <div className="label">Task Description</div>
-//         <div className="info">{taskData?.description}</div>
-//         </div>
-
-//     </div>
-//   );
-// };
 export const ViewTask = () => {
   const { roles, hasRole } = useUserRole();
   const id = useParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [taskDetails, setTaskDetails] = useState<getTaskApiAttributes>();
   const [viewBidmodalShow, setViewBidModalShow] = useState(false);
   const toggleBidViewModal = () => setViewBidModalShow(!viewBidmodalShow);
@@ -62,9 +33,18 @@ export const ViewTask = () => {
       toast.error("Error retreiving data");
     }
   };
+
   useEffect(() => {
     getTaskDetailsByID();
   }, []);
+
+  const handleTabSelect = (key: string | null) => {
+    if (key) {
+      setSearchParams({ type: key.toLowerCase() });
+    }
+  };
+
+  const activeTab = searchParams.get("type")?.toLowerCase() || "details";
 
   return (
     <div className="p-lg-5 p-md-5 p-3">
@@ -82,27 +62,40 @@ export const ViewTask = () => {
           </div>
         </div>
 
-{  ['sales','gig_worker','over_employee','admin'].some((role:any) => hasRole(role)) &&   taskDetails && taskDetails.is_accepted==0 && taskDetails.is_completed==0 &&     <div>                <button
-                  className="task-btn"
-                  onClick={() => toggleBidViewModal()}
-                >
-                  Place Bid
-                </button></div>}
+        {["sales", "gig_worker", "over_employee", "admin"].some((role: any) =>
+          hasRole(role)
+        ) &&
+          taskDetails &&
+          taskDetails.is_accepted == 0 &&
+          taskDetails.is_completed == 0 && (
+            <div>
+              {" "}
+              <button className="task-btn" onClick={() => toggleBidViewModal()}>
+                Place Bid
+              </button>
+            </div>
+          )}
       </div>
 
-      { ['admin','task_manager','gig_worker','over_employee'].some((role:any) => hasRole(role)) ?  (
+      {["admin", "task_manager", "gig_worker", "over_employee"].some(
+        (role: any) => hasRole(role)
+      ) ? (
         <Tabs
-          defaultActiveKey="Details"
+          activeKey={activeTab}
+          onSelect={handleTabSelect}
           id="uncontrolled-tab-example"
           className="mb-3"
         >
-          <Tab eventKey="Details" title="Details">
-            <TaskDetails taskDetails={taskDetails} recallTaskData={getTaskDetailsByID}/>
+          <Tab eventKey="details" title="Details">
+            <TaskDetails
+              taskDetails={taskDetails}
+              recallTaskData={getTaskDetailsByID}
+            />
           </Tab>
-          <Tab eventKey="Bids" title="Bids">
+          <Tab eventKey="bids" title="Bids">
             <ViewBidsClient task_id={id} />
           </Tab>
-          <Tab eventKey="Status" title="Status">
+          <Tab eventKey="status" title="Status">
             <ViewTaskStatusClient task_id={id} />
           </Tab>
         </Tabs>
@@ -110,14 +103,13 @@ export const ViewTask = () => {
         <TaskDetails taskDetails={taskDetails} />
       )}
 
-<CustomModal
+      <CustomModal
         show={viewBidmodalShow}
         toggle={toggleBidViewModal}
         ModalHeader="Place Bid"
       >
         <CreateBid details={taskDetails} closeModal={toggleBidViewModal} />
       </CustomModal>
-      
     </div>
   );
 };

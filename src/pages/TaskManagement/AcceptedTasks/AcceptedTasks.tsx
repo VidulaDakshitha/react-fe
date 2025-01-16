@@ -231,7 +231,8 @@ export const AcceptedTasks = () => {
           )}
 
         {["sales", "admin"].some((role: any) => hasRole(role)) &&
-          !row["has_manager"] && row["is_worker_accepted"] && (
+          !row["has_manager"] &&
+          row["is_worker_accepted"] && (
             <button
               className="employee-btn me-2 w-auto"
               onClick={() => {

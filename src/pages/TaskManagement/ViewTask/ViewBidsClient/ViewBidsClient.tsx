@@ -105,10 +105,11 @@ export const ViewBidsClient = ({ task_id }: any) => {
               <div className="col-2 d-flex align-items-center">
                 <Button
                   className="task-btn w-100"
-                  buttonText={
-                    "Chat with " +
-                    (bidDetail && bidDetail.bidder_name)
-                  }
+                  // buttonText={
+                  //   "Chat with " +
+                  //   // (bidDetail && bidDetail.bidder_name)
+                  // }
+                  buttonText="Chat Here"
                   type="submit"
                   onClickHandler={() =>
                     navigate("/chat/?id=" + bidDetail.job_seeker_id)

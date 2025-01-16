@@ -126,7 +126,7 @@ const attributeLabels: { [key: string]: string } = {
   remaining_amount: 'Remaining Amount',
   is_fully_paid: 'Is Fully Paid',
   progress: 'Progress',
-  exit_criteria: 'Exit Criteria',
+  // exit_criteria: 'Exit Criteria',
   communication_deadline: 'Communication Deadline',
   communication_type: 'Communication Type',
   is_sub_contractors_only: 'Is Sub Contractors Only',

@@ -195,7 +195,7 @@ const attributeLabels: { [key: string]: string } = {
     return (
       <div className="d-flex ">
         {/* <button className="employee-btn me-2" onClick={() => {setSelectedID(row["id"]); toggleUpdateModal()}}>Update</button> */}
-        <button className="employee-btn" onClick={()=>navigate("/task-management/" + row["id"])}>View</button>
+        <button className="employee-btn" onClick={()=>navigate("/task-management/" + row["id"]+'?type=bids')}>View</button>
       </div>
     );
   };
