@@ -8,8 +8,9 @@
   cursor: pointer;
 }
 
-.dropdown-item{
-  font-family: "poppins";
+.dropdown-item:active{
+  font-family: "poppins" !important;
+  font-size: 12px;
 }
 .menu-option {
   font-family: "Poppins";
