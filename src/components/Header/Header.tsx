@@ -73,6 +73,11 @@ const Header: React.FC<HeaderProps> = ({ user }) => {
             </div>
           </li>
           <li>
+            <div className="dropdown-item" onClick={() => navigate("/profile")}>
+              Payment Settings
+            </div>
+          </li>
+          <li>
             <div className="dropdown-item" onClick={() => navigate("/login")}>
               Logout
             </div>

@@ -264,6 +264,16 @@ function App() {
               </ProtectedRoute>
             }
           ></Route>
+
+
+<Route
+            path="my-payments"
+            element={
+              <ProtectedRoute  requiredRoles={["admin", "customer", "billing", "consultant_manager"]}>
+                <MyBids />
+              </ProtectedRoute>
+            }
+          ></Route>
         </Routes>
       </BrowserRouter>
       <ToastContainer />
