@@ -76,7 +76,7 @@ export const WorkerType = () => {
                     />
                   </div>
                   <div className="register-type-option ps-5 pe-5">
-                    Join in as an Individual
+                    Join as an Individual
                   </div>
 
                   {clickType == "w-individual" && (
@@ -112,8 +112,8 @@ export const WorkerType = () => {
                       className=""
                     />
                   </div>
-                  <div className="register-type-option ps-5 pe-5">
-                  Join in as an Over Employee
+                  <div className="register-type-option ps-4 pe-4">
+                  Join as an Over Employee
                   </div>
 
                   {clickType == "employee" && (
@@ -148,7 +148,7 @@ export const WorkerType = () => {
                     />
                   </div>
                   <div className="register-type-option ps-5 pe-5">
-                    Join in As Organization
+                    Join As An Organization
                   </div>
 
                   {clickType == "w-organization" && (

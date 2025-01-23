@@ -75,7 +75,7 @@ export const ClientType = () => {
                     />
                   </div>
                   <div className="register-type-option ps-5 pe-5">
-                    Join in as Individual
+                    Join as an Individual
                   </div>
 
                   {clickType == "individual" && (
@@ -111,7 +111,7 @@ export const ClientType = () => {
                     />
                   </div>
                   <div className="register-type-option ps-5 pe-5">
-                    Join in As Organization
+                    Join As An Organization
                   </div>
 
                   {clickType == "organization" && (

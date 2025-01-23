@@ -112,7 +112,7 @@ export const ViewBidsClient = ({ task_id }: any) => {
                   buttonText="Chat Here"
                   type="submit"
                   onClickHandler={() =>
-                    navigate("/chat/?id=" + bidDetail.job_seeker_id)
+                    navigate("/chat/?id=" + bidDetail.bidder_id)
                   }
                 />
               </div>

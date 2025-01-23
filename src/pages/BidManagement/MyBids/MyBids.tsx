@@ -48,6 +48,8 @@ export const MyBids = () => {
 type JsonAttributes = {
   id?: number;
   title?: string;
+  employer_name?:string;
+  task_title?:string;
   description?: string;
   budget?: number;
   currency?: string;
@@ -98,6 +100,10 @@ type JsonAttributes = {
 // Mapping keys to meaningful names
 const attributeLabels: { [key: string]: string } = {
   id: 'ID',
+  employer_name:'Employer Name',
+  is_accepted_text: 'Is Accepted',
+  task_title:'Task Title',
+  amount:'Amount',
   title: 'Title',
   description: 'Description',
   budget: 'Budget',
@@ -113,7 +119,7 @@ const attributeLabels: { [key: string]: string } = {
   files: 'Files',
   skills: 'Skills',
   is_completed: 'Is Completed',
-  is_accepted: 'Is Accepted',
+  // is_accepted: 'Is Accepted',
   status: 'Status',
   required_skills: 'Required Skills',
   created_on: 'Created On',

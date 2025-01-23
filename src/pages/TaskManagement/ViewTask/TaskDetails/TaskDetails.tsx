@@ -5,6 +5,7 @@ import { UpdateTask } from "../../UpdateTask/UpdateTask";
 import { CreateBid } from "../../../BidManagement/CreateBid/CreateBid";
 import DOMPurify from "dompurify";
 import { ViewAttachment } from "../../../../components/ViewAttachment/ViewAttachment";
+import { Spinner } from "../../../../components/Spinner/Spinner";
 export const TaskDetails = ({ taskDetails, recallTaskData }: any) => {
   console.log("hutto", taskDetails);
   const [attachment, Attachments] = useState([1, 2, 3, 4]);
@@ -22,6 +23,7 @@ export const TaskDetails = ({ taskDetails, recallTaskData }: any) => {
 
   return (
     <>
+
       <div className="row">
         <div className="task-desc pt-4 row">
           {/* <div className="col-8">{taskDetails && taskDetails.description}</div> */}

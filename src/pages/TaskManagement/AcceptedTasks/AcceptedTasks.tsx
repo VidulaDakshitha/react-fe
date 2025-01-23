@@ -247,7 +247,7 @@ export const AcceptedTasks = () => {
         {["sales", "admin"].some((role: any) => hasRole(role)) &&
           !row["is_worker_accepted"] && (
             <button
-              className="employee-btn me-2 w-auto"
+              className="employee-btn me-2 "
               onClick={() => {
                 toggleAcceptTermsModal();
                 setSelectId(row["id"]);

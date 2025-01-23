@@ -59,6 +59,7 @@ export type getTaskApiAttributes = {
     is_accepted:number,
     attachments?:any;
     is_completed:number,
+    created_by_name?:string,
     created_on: string
 }
 

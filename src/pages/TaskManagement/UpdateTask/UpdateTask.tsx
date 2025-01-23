@@ -18,6 +18,7 @@ import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import AddSubContractors from "../CreateTask/AdvancedOption/AddSubContractors";
 import { useUserRole } from "../../../hooks/HasRole";
+import { Spinner } from "../../../components/Spinner/Spinner";
 
 interface Skill {
   id: number;
@@ -41,6 +42,8 @@ export const UpdateTask = ({
   const [modalShow, setModalShow] = useState(false);
   const toggleModal = () => setModalShow(!modalShow);
   const [isLoading, setIsLoading] = useState(false);
+  const [isLoadingAccept, setIsLoadingAccept] = useState(false);
+  const [isLoadingReject, setIsLoadingReject] = useState(false);
   const [selectedSubContractor, setSelectedSubContractor] = useState<any>([]);
   const [task, setTasks] = useState<any>();
   const { roles, hasRole, hasOrganization } = useUserRole();
@@ -114,6 +117,12 @@ export const UpdateTask = ({
   };
 
   const ApproveTask = async(isApproved:any)=>{
+    if(isApproved){
+      setIsLoadingAccept(true)
+    }else{
+      setIsLoadingReject(true)
+    }
+
     let data_values={
       is_post_approved:isApproved
     }
@@ -121,7 +130,8 @@ export const UpdateTask = ({
       data_values,
       task?.id ? task?.id : 0
     );
-    setIsLoading(false);
+    setIsLoadingAccept(false);
+    setIsLoadingReject(false)
     if (task_request.status == 200) {
       toast.success("task updated successfully");
       closeModal();
@@ -133,7 +143,7 @@ export const UpdateTask = ({
 
   return (
     <div>
-      <Formik initialValues={initialValues} onSubmit={onSubmit} enableReinitialize>
+  {task?    <Formik initialValues={initialValues} onSubmit={onSubmit} enableReinitialize>
         {(formik) => (
           <Form className="ps-5 pe-5">
             <div className="row">
@@ -429,7 +439,7 @@ export const UpdateTask = ({
                   className="task-btn me-2"
                   buttonText={"Approve Task"}
                   type="button"
-                  isLoading={isLoading}
+                  isLoading={isLoadingAccept}
                   onClickHandler={()=>ApproveTask(1)}
                 />
 
@@ -437,7 +447,7 @@ export const UpdateTask = ({
                   className="task-btn me-2"
                   buttonText={"Decline Task"}
                   type="button"
-                  isLoading={isLoading}
+                  isLoading={isLoadingReject}
                   onClickHandler={()=>ApproveTask(0)}
                 /></>}
 
@@ -451,8 +461,8 @@ export const UpdateTask = ({
             </div>
           </Form>
         )}
-      </Formik>
-
+      </Formik>:  <Spinner size="large" />
+}
       <CustomModal
         show={modalShow}
         toggle={toggleModal}

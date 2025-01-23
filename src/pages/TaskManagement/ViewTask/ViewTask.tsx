@@ -15,6 +15,7 @@ import payment from "../../../assets/payment.png";
 import CustomModal from "../../../components/Modal/Modal";
 import { CreateBid } from "../../BidManagement/CreateBid/CreateBid";
 import { useUserRole } from "../../../hooks/HasRole";
+import { Spinner } from "../../../components/Spinner/Spinner";
 
 export const ViewTask = () => {
   const { roles, hasRole } = useUserRole();
@@ -48,11 +49,12 @@ export const ViewTask = () => {
 
   return (
     <div className="p-lg-5 p-md-5 p-3">
+{taskDetails ?      <>
       <div className="task-title d-flex justify-content-between">
         <div>
           {taskDetails && taskDetails.title}{" "}
           <span className="by-user">
-            By {taskDetails && taskDetails.created_by}
+            By {taskDetails && taskDetails.created_by_name}
           </span>
           <div className="d-flex">
             <div className="remaining-txt">14 remaining of 50 bids</div>{" "}
@@ -102,7 +104,7 @@ export const ViewTask = () => {
       ) : (
         <TaskDetails taskDetails={taskDetails} />
       )}
-
+</>:<Spinner size="large"/>}
       <CustomModal
         show={viewBidmodalShow}
         toggle={toggleBidViewModal}

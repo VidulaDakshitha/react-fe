@@ -73,7 +73,7 @@ const Header: React.FC<HeaderProps> = ({ user }) => {
             </div>
           </li>
           <li>
-            <div className="dropdown-item" onClick={() => navigate("/profile")}>
+            <div className="dropdown-item" onClick={() => navigate("/my-payments")}>
               Payment Settings
             </div>
           </li>
@@ -200,6 +200,7 @@ const Header: React.FC<HeaderProps> = ({ user }) => {
         items.push(renderMenuItem("Co-workers", "/coworkers", true));
       }
       items.push(renderMenuItem("Chat", "/chat", true));
+      items.push(renderMenuItem("Payments", "/payment-history", true));
     } else {
       // Desktop view - keep the dropdown
       const taskOptions = [
@@ -260,6 +261,7 @@ const Header: React.FC<HeaderProps> = ({ user }) => {
         items.push(renderMenuItem("Co-workers", "/coworkers", false));
       }
       items.push(renderMenuItem("Chat", "/chat", false));
+      items.push(renderMenuItem("Payments", "/payment-history", false));
     }
 
     return items;

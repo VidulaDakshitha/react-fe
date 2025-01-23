@@ -32,6 +32,8 @@ import { MyTasks } from "./pages/TaskManagement/MyTasks/MyTasks";
 import { AcceptedTasks } from "./pages/TaskManagement/AcceptedTasks/AcceptedTasks";
 import { MyBidsSummary } from "./pages/BidManagement/MyBidsSummary/MyBidsSummary";
 import { MyBids } from "./pages/BidManagement/MyBids/MyBids";
+import { PaymentSettings } from "./pages/Payments/PaymentSettings/PaymentSettings";
+import { PaymentHistory } from "./pages/Payments/PaymentHistory/PaymentHistory";
 
 // const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
 //   if (!localStorage.getItem("utoken")) {
@@ -270,7 +272,17 @@ function App() {
             path="my-payments"
             element={
               <ProtectedRoute  requiredRoles={["admin", "customer", "billing", "consultant_manager"]}>
-                <MyBids />
+                <PaymentSettings />
+              </ProtectedRoute>
+            }
+          ></Route>
+
+
+<Route
+            path="payment-history"
+            element={
+              <ProtectedRoute  requiredRoles={["admin", "customer", "billing", "consultant_manager"]}>
+                <PaymentHistory />
               </ProtectedRoute>
             }
           ></Route>

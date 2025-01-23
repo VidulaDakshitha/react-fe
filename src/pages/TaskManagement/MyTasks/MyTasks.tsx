@@ -233,7 +233,7 @@ const attributeLabels: { [key: string]: string } = {
             }`}
             onClick={() => setSearchValue("accepted")}
           >
-            In Accepted
+            Is Accepted
           </div>
           <div
             className={`filter-btn ${searchValue == "rejected" ? "act" : ""}`}
